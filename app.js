@@ -5,6 +5,9 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var helmet = require('helmet');
 
+var Item = require('./models/item');
+Item.sync();
+
 var indexRouter = require('./routes/index');
 
 var app = express();
