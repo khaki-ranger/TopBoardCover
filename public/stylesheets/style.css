@@ -176,7 +176,8 @@ button.ui-component.disabled:hover {
 }
 /* key-visual */
 .key-visual {
-  background-color: #eee;
+  background-color: #666;
+  color: white;
   height: 500px;
   position: relative;
   margin-bottom: 2rem;
@@ -211,6 +212,7 @@ button.ui-component.disabled:hover {
 .select-content .holder .box {
   background-color: white;
   margin-bottom: 1rem;
+  border-radius: 3px;
 }
 .select-content .holder .box .image {
   padding: 1rem;
@@ -260,11 +262,11 @@ button.ui-component.disabled:hover {
   padding: 2rem 0;
 }
 .form-content .btn {
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 @media (max-width: 768px) {
 .form-content .btn .btn-holder {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 }
 @media (min-width: 768px) {
