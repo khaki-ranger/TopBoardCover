@@ -15,31 +15,12 @@ block content
     .container
       h1 デザインを選ぶところ
       .holder
-        .box
-          .image
-            img.responsive-img(src="/images/design/sample_1.png")
-          .text 
-            h2 デザイン1
-        .box
-          .image
-            img.responsive-img(src="/images/design/sample_1.png")
-          .text 
-            h2 デザイン1
-        .box
-          .image
-            img.responsive-img(src="/images/design/sample_1.png")
-          .text 
-            h2 デザイン1
-        .box
-          .image
-            img.responsive-img(src="/images/design/sample_1.png")
-          .text 
-            h2 デザイン1
-        .box
-          .image
-            img.responsive-img(src="/images/design/sample_1.png")
-          .text 
-            h2 デザイン1
+        each item, index in items
+          .box
+            .image
+              img.responsive-img(src=`${item.imgPath}`)
+            .text 
+              h2 #{item.itemname}
   .section.form-content
     .container
       h1 お申し込みフォーム
