@@ -1,6 +1,9 @@
 extends ../layout
 
 block content
-  .section
+  .section.admin
     .container
-      h1 管理者メニュー
+      h1 #{title}
+      ul
+        li
+          a(href="/admin/item/add") 新規アイテム登録

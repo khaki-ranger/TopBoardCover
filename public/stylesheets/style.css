@@ -279,3 +279,10 @@ button.ui-component.disabled:hover {
 .form-content .btn .btn-holder:last-child {
   float: right;
 }
+/* admin */
+.admin {
+  padding-top: 1rem;
+}
+.admin .container h1 {
+  text-align: left;
+}

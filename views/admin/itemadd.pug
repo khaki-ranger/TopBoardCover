@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+  .section.admin
+    .container
+      h1 #{title}
+      form(action="/admin/item/add" method="POST")
+        .ui-component-block.itemname
+          label.ui-component(for="itemname") アイテム名
+          input.ui-component(type="text" name="itemname" id="itemname" placeholder="itemname")
+        .ui-component-block.img-path
+          label.ui-component(for="img-path") 画像パス
+          input.ui-component(type="text" name="imgPath" id="img-path" placeholder="imgPath")
+        .ui-component-block.btn.clearfix
+          .btn-holder
+            button.ui-component(type="submit") 登録
