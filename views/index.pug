@@ -16,23 +16,8 @@ block content
       h1 デザインを選ぶところ
       .holder
         each item, index in items
-          .box
+          a.box(href=`/detail/${item.itemId}`)
             .image
               img.responsive-img(src=`${item.imgPath}`)
             .text 
               h2 #{item.itemname}
-  .section.form-content
-    .container
-      h1 お申し込みフォーム
-      form
-        .ui-component-block.name
-          label.ui-component(for="name") お名前
-          input.ui-component(type="text" name="name" id="name" placeholder="name")
-        .ui-component-block.email
-          label.ui-component(for="email") メールアドレス
-          input.ui-component(type="email" name="email" id="email" placeholder="email")
-        .ui-component-block.btn.clearfix
-          .btn-holder
-            button.ui-component(type="reset") クリア
-          .btn-holder
-            button.ui-component(type="submit") 確認

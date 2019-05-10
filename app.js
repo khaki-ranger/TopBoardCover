@@ -9,6 +9,7 @@ var Item = require('./models/item');
 Item.sync();
 
 var indexRouter = require('./routes/index');
+var detailRouter = require('./routes/detail');
 var adminRouter = require('./routes/admin');
 
 var app = express();
@@ -25,6 +26,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/detail', detailRouter);
 app.use('/admin', adminRouter);
 
 // catch 404 and forward to error handler
