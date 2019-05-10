@@ -79,7 +79,8 @@ label.ui-component span {
   padding: 1rem;
   color: red;
 }
-button.ui-component {
+button.ui-component,
+a.ui-component {
   display: block;
   text-align: center;
   background-color: white;
@@ -96,7 +97,7 @@ input[type="email"].ui-component,
 input[type="password"].ui-component,
 select.ui-component,
 button.ui-component,
-.btn.ui-component {
+a.ui-component {
   width: 100%;
   box-sizing: border-box;
   padding: .5em;
@@ -126,7 +127,8 @@ input[type="password"].ui-component.error {
 .ui-component {
   font-size: 1rem;
 }
-button.ui-component:hover {
+button.ui-component:hover,
+a.ui-component:hover {
   background-color: #666;
   color: white;
 }
@@ -135,7 +137,8 @@ button.ui-component.disabled {
   color: inherit;
   cursor: not-allowed;
 }
-button.ui-component.disabled:hover {
+button.ui-component.disabled:hover,
+a.ui-component.disabled:hover {
   background-color: #ccc;
   color: inherit;
   cursor: not-allowed;
@@ -230,6 +233,14 @@ button.ui-component.disabled:hover {
   margin-right: 0;
 }
 }
+@media (min-width: 576px) {
+.select-content .holder .box {
+  transition: opacity .2s ease-in-out;
+}
+.select-content .holder .box:hover {
+  opacity: .6;
+}
+}
 @media (min-width: 576px) and (max-width: 768px) {
 .select-content .holder .box {
   width: 32%;
@@ -285,4 +296,25 @@ button.ui-component.disabled:hover {
 }
 .admin .container h1 {
   text-align: left;
+}
+/* detail */
+.detail .image {
+  margin: 0 auto;
+}
+@media (max-width: 576px) {
+}
+@media (min-width: 576px) and (max-width: 768px) {
+.detail .image {
+  width: 80%;
+}
+}
+@media (min-width: 768px) and (max-width: 992px) {
+.detail .image {
+  width: 60%;
+}
+}
+@media (min-width: 992px) {
+.detail .image {
+  width: 50%;
+}
 }

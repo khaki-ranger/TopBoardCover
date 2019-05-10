@@ -2,7 +2,10 @@ extends layout
 
 block content
   .section.detail
-    h1 #{item.itemname}
+    .container
+      h1 #{item.itemname}
+      .image
+        img.responsive-img(src=`${item.imgPath}`)
   .section.form-content
     .container
       h1 お申し込みフォーム
@@ -15,6 +18,6 @@ block content
           input.ui-component(type="email" name="email" id="email" placeholder="email")
         .ui-component-block.btn.clearfix
           .btn-holder
-            button.ui-component(type="reset") クリア
+            a.ui-component(href="/") 戻る
           .btn-holder
             button.ui-component(type="submit") 確認
