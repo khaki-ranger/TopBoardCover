@@ -1,19 +1,27 @@
 extends layout
 
 block content
-  .section.form-content
+  .section.confirm
     .container
       h1 お申し込み内容確認
-      form(action="/submit" method="post")
-        ul
-          li
-            p #{dataObject.name}
-          li
-            p #{dataObject.email}
-          li
+      ul
+        li
+          .head お名前
+          .body #{dataObject.name}
+        li
+          .head メールアドレス
+          .body #{dataObject.email}
+        li
+          .head デザイン
+          .body #{dataObject.itemname}
+        li
+          .body.image
             img.responsive-img(src=`${dataObject.imgPath}`)
+  .section.form-content
+    .container
+      form(action="/submit" method="post")
         .ui-component-block.btn.clearfix
           .btn-holder
-            a.ui-component(href="/") 戻る
+            a.ui-component(href="/") 修正
           .btn-holder
             button.ui-component(type="submit") 送信

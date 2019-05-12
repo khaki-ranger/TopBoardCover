@@ -6,6 +6,7 @@ router.post('/', function(req, res, next) {
   const dataObject = {
     name: req.body.name,
     email: req.body.email,
+    itemname: req.body.itemname,
     imgPath: req.body.image,
   };
   console.log(dataObject);

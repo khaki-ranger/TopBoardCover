@@ -147,7 +147,7 @@ a.ui-component.disabled:hover {
 /* container */
 .container h1 {
   text-align: center;
-  margin-bottom: 2rem;
+  padding: 2rem;
 }
 @media (max-width: 576px) {
 .container {
@@ -183,7 +183,6 @@ a.ui-component.disabled:hover {
   color: white;
   height: 500px;
   position: relative;
-  margin-bottom: 2rem;
 }
 .key-visual h1 {
   position: absolute;
@@ -206,7 +205,7 @@ a.ui-component.disabled:hover {
 /* select-content */
 .select-content {
   background-color: #f1f1f1;
-  padding: 2rem 0;
+  padding-bottom: 2rem;
 }
 .select-content .holder {
   display: flex;
@@ -290,6 +289,7 @@ a.ui-component.disabled:hover {
 .form-content .btn .btn-holder:last-child {
   float: right;
 }
+}
 /* admin */
 .admin {
   padding-top: 1rem;
@@ -298,23 +298,34 @@ a.ui-component.disabled:hover {
   text-align: left;
 }
 /* detail */
-.detail .image {
+.detail .image,
+.confirm .image {
   margin: 0 auto;
 }
 @media (max-width: 576px) {
 }
 @media (min-width: 576px) and (max-width: 768px) {
-.detail .image {
+.detail .image,
+.confirm .image {
   width: 80%;
 }
 }
 @media (min-width: 768px) and (max-width: 992px) {
-.detail .image {
+.detail .image,
+.confirm .image {
   width: 60%;
 }
 }
 @media (min-width: 992px) {
-.detail .image {
+.detail .image,
+.confirm .image {
   width: 50%;
 }
+}
+/* confirm */
+.confirm ul li {
+  margin-bottom: 1rem;
+}
+.confirm ul .head {
+  font-weight: bold;
 }

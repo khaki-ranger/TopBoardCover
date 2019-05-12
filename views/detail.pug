@@ -10,6 +10,7 @@ block content
     .container
       h1 お申し込みフォーム
       form(action="/confirm" method="post")
+        input(type="hidden" name="itemname" value=`${item.itemname}`)
         input(type="hidden" name="image" value=`${item.imgPath}`)
         .ui-component-block.name
           label.ui-component(for="name") お名前
