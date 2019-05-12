@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  .section.form-content
+    .container
+      h1 お申し込み内容確認
+      form(action="/submit" method="post")
+        ul
+          li
+            p #{dataObject.name}
+          li
+            p #{dataObject.email}
+          li
+            img.responsive-img(src=`${dataObject.imgPath}`)
+        .ui-component-block.btn.clearfix
+          .btn-holder
+            a.ui-component(href="/") 戻る
+          .btn-holder
+            button.ui-component(type="submit") 送信

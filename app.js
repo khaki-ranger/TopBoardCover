@@ -10,6 +10,7 @@ Item.sync();
 
 var indexRouter = require('./routes/index');
 var detailRouter = require('./routes/detail');
+var confirmRouter = require('./routes/confirm');
 var adminRouter = require('./routes/admin');
 
 var app = express();
@@ -27,6 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/detail', detailRouter);
+app.use('/confirm', confirmRouter);
 app.use('/admin', adminRouter);
 
 // catch 404 and forward to error handler
