@@ -14,7 +14,7 @@ router.post('/', function(req, res, next) {
     res.redirect('/');
   } else {
     User.create(params).then(() => {
-      res.redirect('/');
+      res.redirect('/complete');
     });
   }
 });
