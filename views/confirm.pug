@@ -7,7 +7,7 @@ block content
       ul
         li
           .head お名前
-          .body #{dataObject.name}
+          .body #{dataObject.username}
         li
           .head メールアドレス
           .body #{dataObject.email}
@@ -20,8 +20,11 @@ block content
   .section.form-content
     .container
       form(action="/submit" method="post")
+        input(type="hidden" name="itemid" value=`${dataObject.itemId}`)
+        input(type="hidden" name="username" value=`${dataObject.username}`)
+        input(type="hidden" name="email" value=`${dataObject.email}`)
         .ui-component-block.btn.clearfix
           .btn-holder
-            a.ui-component(href="/") 修正
+            a.ui-component(href=`/detail/${dataObject.itemId}`) 修正
           .btn-holder
             button.ui-component(type="submit") 送信

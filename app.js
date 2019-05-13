@@ -6,11 +6,14 @@ var logger = require('morgan');
 var helmet = require('helmet');
 
 var Item = require('./models/item');
+var User = require('./models/user');
 Item.sync();
+User.sync();
 
 var indexRouter = require('./routes/index');
 var detailRouter = require('./routes/detail');
 var confirmRouter = require('./routes/confirm');
+var submitRouter = require('./routes/submit');
 var adminRouter = require('./routes/admin');
 
 var app = express();
@@ -29,6 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/detail', detailRouter);
 app.use('/confirm', confirmRouter);
+app.use('/submit', submitRouter);
 app.use('/admin', adminRouter);
 
 // catch 404 and forward to error handler
