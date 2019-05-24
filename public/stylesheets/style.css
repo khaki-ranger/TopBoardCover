@@ -179,21 +179,46 @@ a.ui-component.disabled:hover {
 }
 /* key-visual */
 .key-visual {
-  background-color: #666;
-  color: white;
-  height: 500px;
   position: relative;
 }
 .key-visual h1 {
   position: absolute;
-  top: 0;
+  top: 4rem;
   left: 0;
   right: 0;
-  bottom: 0;
-  margin: auto;
   text-align: center;
-  height: 130px;
-  font-size: 3rem;
+  width: 100%;
+  color: white;
+}
+.key-visual .holder {
+  display: table;
+  width: 100%;
+  height: 500px;
+}
+.key-visual .holder>div {
+  display: table-cell;
+  width: 50%;
+  vertical-align: middle;
+  color: white;
+  text-align: center;
+}
+.key-visual .holder>div:first-child,
+.key-visual .holder>div:first-child a {
+  background-color: #0010d2;
+}
+.key-visual .holder>div:last-child,
+.key-visual .holder>div:last-child a {
+  background-color: #ff1f3b;
+}
+.key-visual .holder>div .box {
+  padding: 4rem;
+}
+.key-visual .holder>div .box h2 {
+  margin-bottom: 1rem;
+}
+.key-visual .holder>div a {
+  border: solid 3px white;
+  font-weight: bold;
 }
 /* description */
 .description {
@@ -203,8 +228,12 @@ a.ui-component.disabled:hover {
   margin-bottom: 1rem;
 }
 /* select-content */
+.original-content h1,
+.select-content h1 {
+  color: white;
+}
 .select-content {
-  background-color: #f1f1f1;
+  background-color: #0010d2;
   padding-bottom: 2rem;
 }
 .select-content .holder {
@@ -266,6 +295,26 @@ a.ui-component.disabled:hover {
 .select-content .holder .box:nth-of-type(5n) {
   margin-right: 0;
 }
+}
+/* original-content */
+.original-content {
+  background-color: #ff1f3b;
+  padding-bottom: 2rem;
+  color: white;
+}
+.original-content h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.original-content .file-upload {
+  border: solid 3px white;
+  border-radius: 3px;
+  padding: 2rem;
+  text-align: center;
+}
+.original-content .file-upload ul {
+  text-align: left;
+  margin-top: 2rem;
 }
 /* form-content */
 .form-content {
