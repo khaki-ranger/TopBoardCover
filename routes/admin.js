@@ -22,7 +22,8 @@ router.post('/item/add', auth, (req, res, next) => {
   const params = {
     itemId: uuidV1(),
     itemname: req.body.itemname,
-    imgPath: req.body.imgPath
+    imgPath: req.body.imgPath,
+    notice: req.body.notice
   };
   if (!params.itemname || !params.imgPath) {
     console.log('アイテム名か画像パスが未入力です');

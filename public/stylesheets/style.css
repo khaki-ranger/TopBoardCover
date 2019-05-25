@@ -92,6 +92,7 @@ select.ui-component {
   height: 2.4rem;
   appearance: none;
 }
+textarea.ui-component,
 input[type="text"].ui-component,
 input[type="email"].ui-component,
 input[type="password"].ui-component,
@@ -103,6 +104,7 @@ a.ui-component {
   padding: .5em;
   border-radius: 3px;
 }
+textarea.ui-component,
 input[type="text"].ui-component,
 input[type="email"].ui-component,
 input[type="password"].ui-component,

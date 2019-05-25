@@ -15,6 +15,10 @@ const Item = loader.database.define('items', {
   imgPath: {
     type: Sequelize.STRING,
     allowNull: false
+  },
+  notice: {
+    type: Sequelize.STRING,
+    allowNull: true
   }
 }, {
     freezeTableName: true,
