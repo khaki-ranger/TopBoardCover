@@ -16,6 +16,26 @@ const User = loader.database.define('users', {
     type: Sequelize.STRING,
     allowNull: false
   },
+  sex: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+  year: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+  college: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+  department: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+  club: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
   itemId: {
     type: Sequelize.UUID,
     allowNull: false

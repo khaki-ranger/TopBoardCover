@@ -8,6 +8,11 @@ router.post('/', function(req, res, next) {
     userId: uuidV1(),
     username: req.body.username,
     email: req.body.email,
+    sex: req.body.sex,
+    year: req.body.year,
+    college: req.body.college,
+    department: req.body.department,
+    club: req.body.club,
     itemId: req.body.itemid
   };
   if (!params.itemId || !params.username || !params.email) {

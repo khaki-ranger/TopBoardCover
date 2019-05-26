@@ -6,23 +6,40 @@ block content
       h1 お申し込み内容確認
       ul
         li
+          .body.image
+            img.responsive-img(src=`${dataObject.imgPath}`)
+        li
           .head お名前
           .body #{dataObject.username}
         li
           .head メールアドレス
           .body #{dataObject.email}
         li
-          .head デザイン
-          .body #{dataObject.itemname}
+          .head 性別  
+          .body #{dataObject.sex}
         li
-          .body.image
-            img.responsive-img(src=`${dataObject.imgPath}`)
+          .head 学年 
+          .body #{dataObject.year}
+        li
+          .head 学部 
+          .body #{dataObject.college}
+        li
+          .head 学科 
+          .body #{dataObject.department}
+        li
+          .head 部活・サークル
+          .body #{dataObject.club}
   .section.form-content
     .container
       form(action="/submit" method="post")
         input(type="hidden" name="itemid" value=`${dataObject.itemId}`)
         input(type="hidden" name="username" value=`${dataObject.username}`)
         input(type="hidden" name="email" value=`${dataObject.email}`)
+        input(type="hidden" name="sex" value=`${dataObject.sex}`)
+        input(type="hidden" name="year" value=`${dataObject.year}`)
+        input(type="hidden" name="college" value=`${dataObject.college}`)
+        input(type="hidden" name="department" value=`${dataObject.department}`)
+        input(type="hidden" name="club" value=`${dataObject.club}`)
         .ui-component-block.btn.clearfix
           .btn-holder
             a.ui-component(href=`/detail/${dataObject.itemId}`) 修正
