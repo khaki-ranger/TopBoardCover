@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const uuidV1 = require('uuid/v1');
 const User = require('../models/user');
+const Sendmail = require('./sendmail');
 
 router.post('/', function(req, res, next) {
   const params = {
@@ -19,6 +20,8 @@ router.post('/', function(req, res, next) {
     res.redirect('/');
   } else {
     User.create(params).then(() => {
+      const sendmail = new Sendmail(params);
+      sendmail.send();
       res.redirect('/complete');
     });
   }

@@ -6,23 +6,33 @@ const MAIL_AUTH_USER = process.env.MAIL_AUTH_USER;
 const MAIL_AUTH_PASSWORD = process.env.MAIL_AUTH_PASSWORD;
 
 module.exports = class Sendmail {
-  constructor() {
+  constructor(params) {
 
-    this.subject = '［予約サービス］ご予約キャンセルのお知らせ';
-    this.bodyText = '予約キャンセルメールのテストです。';
+this.subject = '［天板化粧シート］お申し込み完了のお知らせ';
+this.bodyText = 'お申し込みが完了しました';
 
-this.messageBody = `${params.guestname} 様
+this.messageBody = `${params.username} 様
 ${this.bodyText}
-【ご予約施設】
-${params.officename}
-${params.spacename}
-【ご予約日時】
-${params.year}年 ${params.month}月 ${params.day}日 (${params.dayofweekstring}) ${params.periodname}
+【お申し込み内容】
+お名前 :
+${params.username}
+メールアドレス :
+${params.email}
+性別 : 
+${params.sex}
+学年 :
+${params.year}
+学部 :
+${params.college}
+学科 :
+${params.department}
+部活・サークル
+${params.club}
 `;
 
     this.message = {
-      from: 'ツモリンク <' + MAIL_AUTH_USER + '>',
-      to: params.to,
+      from: '天板化粧シート <' + MAIL_AUTH_USER + '>',
+      to: params.email,
       subject: this.subject,
       text: this.messageBody
     };

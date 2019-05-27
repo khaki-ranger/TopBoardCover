@@ -7,11 +7,11 @@ block content
       .select
         .box
           h2 40種類から選ぶ！
-          a.ui-component(href="/#select") デザインを選ぶ
+          a.ui-component(href="#select") デザインを選ぶ
       .original
         .box
           h2 先着10名様限定！
-          a.ui-component(href="/#original") オリジナル制作
+          a.ui-component(href="#original") オリジナル制作
   .section.description
     .container
       h1 この企画の説明とかが色々書いてある
@@ -40,3 +40,16 @@ block content
               |br 小さいと仕上がりの画質が悪くなります
         .ui-component-block
           button.ui-component 確認する
+  script.
+    'use strict';
+
+    $(function(){
+      $('a[href^="#"]').click(function() {
+        var speed = 400;
+        var href= $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $('body, html').animate({scrollTop:position}, speed, 'swing');
+        return false;
+      });
+    });
