@@ -195,7 +195,6 @@ a.ui-component.disabled:hover {
 .key-visual .holder {
   display: table;
   width: 100%;
-  height: 500px;
 }
 .key-visual .holder>div {
   display: table-cell;
@@ -212,15 +211,39 @@ a.ui-component.disabled:hover {
 .key-visual .holder>div:last-child a {
   background-color: #FF1744;
 }
-.key-visual .holder>div .box {
-  padding: 4rem;
-}
 .key-visual .holder>div .box h2 {
   margin-bottom: 1rem;
 }
 .key-visual .holder>div a {
   border: solid 3px white;
   font-weight: bold;
+}
+@media (max-width: 768px) {
+.key-visual h1 {
+  font-size: 1.5rem;
+  top: 2rem;
+}
+.key-visual .holder {
+  height: 300px;
+}
+.key-visual .holder>div .box {
+  padding: 1rem;
+}
+.key-visual .holder>div .box h2,
+.key-visual .holder>div a {
+  font-size: 1rem;
+}
+}
+@media (min-width: 768px) {
+.key-visual h1 {
+  top: 4rem;
+}
+.key-visual .holder {
+  height: 500px;
+}
+.key-visual .holder>div .box {
+  padding: 4rem;
+}
 }
 /* description */
 .description {
@@ -307,12 +330,21 @@ a.ui-component.disabled:hover {
 .original-content h2 {
   margin-bottom: 1rem;
   text-align: center;
+  font-size: 1rem;
 }
 .original-content .file-upload {
   border: solid 3px white;
   border-radius: 3px;
   padding: 2rem;
   text-align: center;
+}
+.original-content .file-upload label {
+  display: block;
+}
+.original-content .file-upload label i {
+  color: white;
+  font-size: 6rem;
+  margin-bottom: 1rem;
 }
 .original-content .file-upload ul {
   text-align: left;

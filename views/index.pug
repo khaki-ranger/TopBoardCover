@@ -29,10 +29,15 @@ block content
   .section.original-content#original
     .container
       h1 オリジナル制作
-      h2 画像ファイルを選択してアップロードしてください
+      h2 
+        | 画像ファイルを選択して
+        br
+        | アップロードしてください
       form
         .ui-component-block.file-upload
-          input(type="file")
+          label(for="upload")
+            i.fas.fa-camera
+          input(type="file" id="upload")
           ul.caution
             li 画像はおおよそ3:2（ヨコ 3:タテ 2）の比率になるようにお願いします
             li スマホの写真の場合は横撮りでお願いします
