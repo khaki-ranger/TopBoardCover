@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const uuidV1 = require('uuid/v1');
 const auth = require('../auth');
 const Item = require('../models/item');
 
@@ -20,13 +19,12 @@ router.get('/item/add', auth, (req, res, next) => {
 
 router.post('/item/add', auth, (req, res, next) => {
   const params = {
-    itemId: uuidV1(),
-    itemname: req.body.itemname,
     imgPath: req.body.imgPath,
-    notice: req.body.notice
+    notice: req.body.notice,
+    original: false
   };
-  if (!params.itemname || !params.imgPath) {
-    console.log('アイテム名か画像パスが未入力です');
+  if (!params.imgPath) {
+    console.log('画像パスが未入力です');
     res.redirect('/admin');
   } else {
     Item.create(params).then(() => {

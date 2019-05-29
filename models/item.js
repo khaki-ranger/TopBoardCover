@@ -4,12 +4,9 @@ const Sequelize = loader.Sequelize;
 
 const Item = loader.database.define('items', {
   itemId: {
-    type: Sequelize.UUID,
+    type: Sequelize.INTEGER,
+    autoIncrement: true,
     primaryKey: true,
-    allowNull: false
-  },
-  itemname: {
-    type: Sequelize.STRING,
     allowNull: false
   },
   imgPath: {
@@ -19,6 +16,10 @@ const Item = loader.database.define('items', {
   notice: {
     type: Sequelize.STRING,
     allowNull: true
+  },
+  original: {
+    type: Sequelize.BOOLEAN,
+    allowNull: false
   }
 }, {
     freezeTableName: true,

@@ -33,18 +33,18 @@ block content
         | 画像ファイルを選択して
         br
         | アップロードしてください
-      form
+      form(action="/upload" method="post" enctype="multipart/form-data")
         .ui-component-block.file-upload
           label(for="upload")
             i.fas.fa-camera
-          input(type="file" id="upload")
+          input(type="file" name="designimage" id="upload")
           ul.caution
             li 画像はおおよそ3:2（ヨコ 3:タテ 2）の比率になるようにお願いします
             li スマホの写真の場合は横撮りでお願いします
             li なるべくサイズ（画素数）の大きい画像データをお勧めします
               |br 小さいと仕上がりの画質が悪くなります
         .ui-component-block
-          button.ui-component 確認する
+          button.ui-component(type="submit") 確認する
   script.
     'use strict';
 
