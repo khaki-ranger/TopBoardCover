@@ -1,20 +1,9 @@
 extends layout
 
 block content
-  .section.key-visual
-    h1 天板化粧シートのお申し込み
-    .holder
-      .select
-        .box
-          h2 40種類から選ぶ！
-          a.ui-component(href="#select") デザインを選ぶ
-      .original
-        .box
-          h2 先着10名様限定！
-          a.ui-component(href="#original") オリジナル制作
   .section.description
     .container
-      h1 この企画の説明とかが色々書いてある
+      h1 天板化粧シートのお申し込み
       p.read ユーザは理事フリーを要求するプロジェクトあるないため、削除しれるフリーに回避物法的の括弧事例と従っれてはするます、GFDLの資料も、侵害しルールで侵害さことによって除外可能でですのでいるならり。ないし、文献の.性も、主体性の説明し回避十分ないフェアを転載よれ、その下でできるて方針を許諾下げことが引用認めれます。一方を、侵害著者が引用するればくださいフリーを仮にあたりすることも、要求ませで、場合によるも行為者の著作に対する用語上の問題はしことを、本削除権は、独自の要約が設けるて一般で引用するでてくださいですん。
       h2 小見出し
       p.read 一方のどこかと既存でき場合は、複製として、制定の権利に場合掲げるれように存続基づくませ。被両立プロジェクトで、著作掲げるてしれます日本語中の追加および達成、たとえば法律利用によって該当の許諾ますないば、引用の著者2007と107にしとい場合投稿として引用に適切で一部は、公表意見を理解してい。および、厳格に基づくて代表家に投稿できる、十分た回避をできるばいる。情報者、また要件法が、本複数を誤認できあることで文章として、許諾として可能最小限にできことにしです。
@@ -26,35 +15,3 @@ block content
           a.box(href=`/detail/${item.itemId}`)
             .image
               img.responsive-img(src=`${item.imgPath}`)
-  .section.original-content#original
-    .container
-      h1 オリジナル制作
-      h2 
-        | 画像ファイルを選択して
-        br
-        | アップロードしてください
-      form(action="/upload" method="post" enctype="multipart/form-data")
-        .ui-component-block.file-upload
-          label(for="upload")
-            i.fas.fa-image
-          input(type="file" name="designimage" id="upload")
-          ul.caution
-            li 画像はおおよそ3:2（ヨコ 3:タテ 2）の比率になるようにお願いします
-            li スマホの写真の場合は横撮りでお願いします
-            li なるべくサイズ（画素数）の大きい画像データをお勧めします
-              |br 小さいと仕上がりの画質が悪くなります
-        .ui-component-block
-          button.ui-component(type="submit") 確認する
-  script.
-    'use strict';
-
-    $(function(){
-      $('a[href^="#"]').click(function() {
-        var speed = 400;
-        var href= $(this).attr("href");
-        var target = $(href == "#" || href == "" ? 'html' : href);
-        var position = target.offset().top;
-        $('body, html').animate({scrollTop:position}, speed, 'swing');
-        return false;
-      });
-    });
